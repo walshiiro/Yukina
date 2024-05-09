@@ -49,7 +49,15 @@ async def avatar(ctx, user: discord.Member):
 @bot.command()
 async def svavatar(ctx, users: discord.Member):
     await commandss.svavatar(ctx, users)
-
+@bot.command()
+async def yukinainv(ctx):
+    await ctx.send('https://discord.com/oauth2/authorize?client_id=1235552790026387548')
+@bot.command()
+async def r34(ctx,tag):
+    await commandss.rule34(ctx,tag)
+@bot.command()
+async def r34taglist(ctx):
+    await commandss.r34taglist(ctx)
 
 
 
