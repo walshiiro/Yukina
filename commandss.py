@@ -58,6 +58,32 @@ async def svavatar(ctx, user: discord.Member):
 
 
 
+async def rule34(ctx,tag):
+    r34py= rule34Py()
+
+    tag.capitalize()
+    r34py = r34py.random_post([tag])
+    embed = discord.Embed(title=tag,description='Artist: '+ r34py.owner)
+    embed.set_image(url=r34py.image)
+
+    await ctx.send(embed=embed)
+    
+
+
+
+
+async def r34taglist(ctx):
+    await ctx.send('https://rule34.xxx/index.php?page=tags&s=list')
+
+
+
+
+
+
+
+
+
+
 '''async def ask(ctx, *what):
     openai_api: str='api_key'
     client = OpenAI(
